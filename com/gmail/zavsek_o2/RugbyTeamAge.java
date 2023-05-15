@@ -14,8 +14,8 @@ public class RugbyTeamAge {
         System.out.println("Вік гравців другої команди: ");
         printAges(secondTeamAges);
 
-        int firstAveragesAge = (int) calculateAverageAge(firstTeamAges);
-        int secondAveragesAge = (int) calculateAverageAge(secondTeamAges);
+        int firstAveragesAge = calculateAverageAge(firstTeamAges);
+        int secondAveragesAge = calculateAverageAge(secondTeamAges);
 
         System.out.println("Середній вік первої команди: " + firstAveragesAge);
         System.out.println("Середній вік другої команди: " + secondAveragesAge);
@@ -41,8 +41,8 @@ public class RugbyTeamAge {
     }
 
 
-    public static double calculateAverageAge(List<Integer> ages) {
-        double sum = 0;
+    public static int calculateAverageAge(List<Integer> ages) {
+        int sum = 0;
         for(int age : ages) {
             sum += age;
         }
